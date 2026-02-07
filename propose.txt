@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Pranjal ❤️ | Propose Day</title>
+
+<style>
+:root {
+  --bg: #050507;
+  --card: #0c0c12;
+  --text: #eaeaf0;
+  --muted: #9a9aa7;
+  --accent: #ff4d6d;
+  --glow: rgba(255,77,109,0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+  background: radial-gradient(circle at top, #0a0a14, #020203);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+
+.card {
+  max-width: 800px;
+  background: linear-gradient(180deg, #0e0e18, #07070c);
+  border-radius: 28px;
+  padding: 3rem;
+  box-shadow: 0 0 60px rgba(255,77,109,0.08);
+  position: relative;
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+h1, h2 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.next {
+  margin-top: 2.5rem;
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff4d6d, #ff6f91);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 30px var(--glow);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.next:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px var(--glow);
+}
+
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 18px;
+  animation: rise 6s linear forwards;
+  color: var(--accent);
+  pointer-events: none;
+}
+
+@keyframes rise {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-120vh) scale(1.6); opacity: 0; }
+}
+
+.proposal-buttons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  padding: 16px 42px;
+  font-size: 1.1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.yes {
+  background: linear-gradient(135deg, #ff4d6d, #ff8fab);
+  color: white;
+  box-shadow: 0 0 40px var(--glow);
+}
+
+.no {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid #333;
+}
+
+#celebration {
+  display: none;
+  text-align: center;
+}
+
+#celebration h1 {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SECTION 1 -->
+<section>
+  <div class="card">
+    <h1>Hey <span class="accent">Pranjal</span> 🌙</h1>
+    <p>
+      I’ve been meaning to say this for a while now.  
+      Some feelings don’t arrive loudly…  
+      they grow quietly — and suddenly, they mean everything.
+    </p>
+    <a href="#letter" class="next">Read This</a>
+  </div>
+</section>
+
+<!-- LOVE LETTER -->
+<section id="letter">
+  <div class="card">
+    <h2>A Little Love Letter 💌</h2>
+    <p>
+      Dear Pranjal,<br><br>
+      You have this beautiful way of making ordinary moments feel special.  
+      The more I got to know you, the more I realized how comfortable my heart feels around you.
+      <br><br>
+      I admire your smile, your kindness, and the calm you bring into my thoughts.  
+      Without even trying, you became someone I care about deeply.
+      <br><br>
+      This isn’t just a crush — it’s something honest, something real.  
+      And today, I just wanted you to know that.
+    </p>
+    <a href="#feelings" class="next">One More Thing</a>
+  </div>
+</section>
+
+<!-- FEELINGS -->
+<section id="feelings">
+  <div class="card">
+    <h2>From My Heart</h2>
+    <p>
+      I don’t promise perfection.  
+      But I do promise effort, respect, laughter, and a heart that chooses you — every day.
+    </p>
+    <a href="#proposal" class="next">So…</a>
+  </div>
+</section>
+
+<!-- PROPOSAL -->
+<section id="proposal">
+  <div class="card">
+    <h2>Pranjal 💖</h2>
+    <h1>Will you be <span class="accent">mine</span>?</h1>
+
+    <div class="proposal-buttons">
+      <button class="yes" onclick="celebrate()">YES 💍</button>
+      <button class="no" onclick="tease()">No 🙈</button>
+    </div>
+
+    <div id="celebration">
+      <h1>She Said YES!!! ❤️✨</h1>
+      <p>This moment means the world to me.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+function spawnHeart() {
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.innerText = '❤️';
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.animationDuration = 4 + Math.random() * 4 + 's';
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 7000);
+}
+setInterval(spawnHeart, 600);
+
+function celebrate() {
+  document.getElementById('celebration').style.display = 'block';
+  for(let i=0;i<50;i++) setTimeout(spawnHeart, i*80);
+}
+
+function tease() {
+  alert("Hey Pranjal 😌 maybe think again…");
+}
+</script>
+
+</body>
+</html>
